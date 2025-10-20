@@ -14,16 +14,21 @@ public class MathUtility {
     // 0, 20 => boundary value - biên giới của tập giá trị
     //  xích qua 1 xíu là sang vùng invalid boundary
     // 0, xích nhẹ sang trái 1 đơn vị, ko tính được
+    //    public static long getFactorial(int n) {
+    //        if (n < 0 || n > 20) {
+    //            throw new IllegalArgumentException("n must be between 0 and 20");
+    //        }
+    //
+    //        // biến trung gian để tính phép nhân
+    //        long result = 1;
+    //        for (int i = 1; i <= n; i++) {
+    //            result *= i;
+    //        }
+    //        return result;
+    //    }
     public static long getFactorial(int n) {
-        if (n < 0 || n > 20) {
-            throw new IllegalArgumentException("n must be between 0 and 20");
-        }
-
-        // biến trung gian để tính phép nhân
-        long result = 1;
-        for (int i = 1; i <= n; i++) {
-            result *= i;
-        }
-        return result;
+        if (n < 0 || n > 20) throw new IllegalArgumentException("n must be between 0 and 20");
+        if (n == 1 || n == 0) return 1;
+        return n * getFactorial(n - 1);
     }
 }
