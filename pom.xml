@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.hycat</groupId>
+    <artifactId>mathutil</artifactId>
+    <version>67.89</version>
+
+    <properties>
+        <maven.compiler.source>24</maven.compiler.source>
+        <maven.compiler.target>24</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!--
+        đây là nơi khai báo các thư viện lập trình mình cần dùng trong app
+            - thư viện lập trình - library là cái file binary được người khác code sẵn,
+            chứa nhiều class và các hàm sẵn cho dev dùng trong code
+        Ví dụ mình cần export data ra file pdf, import từ excel..., ta sẽ tìm thư viện trên mạng
+            có sẵn những tính năng này, tải về và add vào prj, import package.class tương ứng để code
+        Tìm, tải, add, import
+        Thư viện gọi là dependency, add dependency vào project
+    -->
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>6.0.0-RC3</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>
